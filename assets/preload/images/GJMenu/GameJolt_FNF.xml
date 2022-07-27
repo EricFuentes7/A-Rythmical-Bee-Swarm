@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GameJolt FNF.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Gamejolt_shit0000" x="0" y="0" width="462" height="239"/>
+	<SubTexture name="Gamejolt_shit0001" x="0" y="0" width="462" height="239"/>
+	<SubTexture name="Gamejolt_shit0002" x="0" y="0" width="462" height="239"/>
+	<SubTexture name="Gamejolt_shit0003" x="0" y="0" width="462" height="239"/>
+	<SubTexture name="Gamejolt_shit0004" x="462" y="0" width="462" height="239"/>
+	<SubTexture name="Gamejolt_shit0005" x="462" y="0" width="462" height="239"/>
+	<SubTexture name="Gamejolt_shit0006" x="462" y="0" width="462" height="239"/>
+	<SubTexture name="Gamejolt_shit0007" x="462" y="0" width="462" height="239"/>
+	<SubTexture name="gamejolt_text_animation0000" x="0" y="239" width="435" height="193"/>
+	<SubTexture name="gamejolt_text_animation0001" x="0" y="239" width="435" height="193"/>
+	<SubTexture name="gamejolt_text_animation0002" x="0" y="239" width="435" height="193"/>
+	<SubTexture name="gamejolt_text_animation0003" x="0" y="239" width="435" height="193"/>
+	<SubTexture name="gamejolt_text_animation0004" x="435" y="239" width="434" height="192" frameX="0" frameY="0" frameWidth="435" frameHeight="193"/>
+	<SubTexture name="gamejolt_text_animation0005" x="435" y="239" width="434" height="192" frameX="0" frameY="0" frameWidth="435" frameHeight="193"/>
+	<SubTexture name="gamejolt_text_animation0006" x="435" y="239" width="434" height="192" frameX="0" frameY="0" frameWidth="435" frameHeight="193"/>
+	<SubTexture name="gamejolt_text_animation0007" x="435" y="239" width="434" height="192" frameX="0" frameY="0" frameWidth="435" frameHeight="193"/>
+</TextureAtlas>

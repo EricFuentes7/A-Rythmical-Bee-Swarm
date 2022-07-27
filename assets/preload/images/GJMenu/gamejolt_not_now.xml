@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gamejolt_not_now.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="not_now_normal0000" x="0" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_normal0001" x="0" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_normal0002" x="0" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_normal0003" x="0" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_normal0004" x="329" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_normal0005" x="329" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_normal0006" x="329" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_normal0007" x="329" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_selected0000" x="658" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_selected0001" x="658" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_selected0002" x="658" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_selected0003" x="658" y="0" width="329" height="160"/>
+	<SubTexture name="not_now_selected0004" x="0" y="160" width="329" height="160"/>
+	<SubTexture name="not_now_selected0005" x="0" y="160" width="329" height="160"/>
+	<SubTexture name="not_now_selected0006" x="0" y="160" width="329" height="160"/>
+	<SubTexture name="not_now_selected0007" x="0" y="160" width="329" height="160"/>
+</TextureAtlas>

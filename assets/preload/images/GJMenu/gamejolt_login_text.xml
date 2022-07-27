@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gamejolt_login_text.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="login_text_normal0000" x="0" y="0" width="327" height="94"/>
+	<SubTexture name="login_text_normal0001" x="0" y="0" width="327" height="94"/>
+	<SubTexture name="login_text_normal0002" x="0" y="0" width="327" height="94"/>
+	<SubTexture name="login_text_normal0003" x="0" y="0" width="327" height="94"/>
+	<SubTexture name="login_text_normal0004" x="0" y="94" width="327" height="94"/>
+	<SubTexture name="login_text_normal0005" x="0" y="94" width="327" height="94"/>
+	<SubTexture name="login_text_normal0006" x="0" y="94" width="327" height="94"/>
+	<SubTexture name="login_text_normal0007" x="0" y="94" width="327" height="94"/>
+	<SubTexture name="login_text_selected0000" x="0" y="188" width="327" height="94"/>
+	<SubTexture name="login_text_selected0001" x="0" y="188" width="327" height="94"/>
+	<SubTexture name="login_text_selected0002" x="0" y="188" width="327" height="94"/>
+	<SubTexture name="login_text_selected0003" x="0" y="188" width="327" height="94"/>
+	<SubTexture name="login_text_selected0004" x="0" y="282" width="327" height="93" frameX="0" frameY="0" frameWidth="327" frameHeight="94"/>
+	<SubTexture name="login_text_selected0005" x="0" y="282" width="327" height="93" frameX="0" frameY="0" frameWidth="327" frameHeight="94"/>
+	<SubTexture name="login_text_selected0006" x="0" y="282" width="327" height="93" frameX="0" frameY="0" frameWidth="327" frameHeight="94"/>
+	<SubTexture name="login_text_selected0007" x="0" y="282" width="327" height="93" frameX="0" frameY="0" frameWidth="327" frameHeight="94"/>
+</TextureAtlas>
