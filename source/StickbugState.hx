@@ -46,7 +46,7 @@ class StickbugState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("In StickBug menu", null);
 		#end
 
 		persistentUpdate = true;

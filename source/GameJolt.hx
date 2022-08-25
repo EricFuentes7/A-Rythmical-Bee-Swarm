@@ -393,7 +393,7 @@ class GameJoltLogin extends MusicBeatSubstate
         gamejoltText2.color = FlxColor.fromRGB(204,138,45);
         add(gamejoltText2);
 
-        funnyText = new FlxText(5, FlxG.height - 40, 0, GameJoltInfo.textArray[FlxG.random.int(0, GameJoltInfo.textArray.length - 1)]+ " -Vegecri", 12);
+        funnyText = new FlxText(5, FlxG.height - 40, 0, GameJoltInfo.textArray[FlxG.random.int(0, GameJoltInfo.textArray.length - 1)], 13);
         add(funnyText);
 
         versionText = new FlxText(5, FlxG.height - 22, 0, "Game ID: " + GJKeys.id + " API: " + GameJoltInfo.version, 12);
