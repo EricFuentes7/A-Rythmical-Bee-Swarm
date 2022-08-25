@@ -380,14 +380,20 @@ class PlayState extends MusicBeatState
 		var shitStuff = ['scrollSpeed', 'moreArrows', 'windowMoves', 'camMoves', 'coloringArrow'];
 
 		switch (songName){
-			case 'yousuckmydick':
-				switch (shitStuff){
-					case 'scrollSpeed':
-						songSpeed += 0.5;
-					case 'coloringArrow':
-						var arrowBabyCrying:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player);
-						var flxgStuffy = FlxG.random.float(0, 255);
-						arrowBabyCrying.setColorTransform(flxgStuffy, flxgStuffy, flxgStuffy);
+			case 'bopeebo':
+				if (curStep == FlxG.random.int(900)){
+					if (curBeat % 8 == 4){
+						switch (shitStuff){
+							case 'scrollSpeed':
+								songSpeed += 1;
+								var textS = "Song Speed + 0.5!";
+							case 'coloringArrow':
+								var arrowBabyCrying:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player);
+								var flxgStuffy = FlxG.random.float(0, 255);
+								arrowBabyCrying.setColorTransform(flxgStuffy, flxgStuffy, flxgStuffy);
+								var textAC = "changing color to" + flxgStuffy + "...";
+						}
+					}
 				}
 			default:
 				break;
