@@ -1,5 +1,6 @@
 package;
 
+import flixel.math.FlxRandom;
 import flixel.graphics.FlxGraphic;
 #if desktop
 import Discord.DiscordClient;
@@ -375,6 +376,45 @@ class PlayState extends MusicBeatState
 					curStage = 'stage';
 			}
 		}
+
+		var shitStuff = ['scrollSpeed', 'moreArrows', 'windowMoves', 'camMoves', 'coloringArrow'];
+
+		switch (songName){
+			case 'yousuckmydick':
+				switch (shitStuff){
+					case 'scrollSpeed':
+						songSpeed += 0.5;
+					case 'coloringArrow':
+						var arrowBabyCrying:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player);
+						var flxgStuffy = FlxG.random.float(0, 255);
+						arrowBabyCrying.setColorTransform(flxgStuffy, flxgStuffy, flxgStuffy);
+				}
+			default:
+				break;
+		}
+
+		// - VegecriSLost
+
+		/*	song -> songName
+				gift -> random gifts
+				var gift sprite = sprite
+				var gifts {
+					+ scroll speed			{
+					+ arrow shot
+					+ windows movement 			--> 10/15/20s?
+					+ camera movement
+					+ arrows weird (color)  }
+				}
+				show gift --> text + sprite as bg of text
+				apply gift
+				gift effects {
+					+ 0.5 scroll speed
+					+ more arrow notes
+					+ window camera movement 			
+					+ camera movement
+					+ change color of the arrows? / change pos of them?
+				}
+		*/
 
 		var stageData:StageFile = StageData.getStageFile(curStage);
 		if(stageData == null) { //Stage couldn't be found, create a dummy stage for preventing a crash
