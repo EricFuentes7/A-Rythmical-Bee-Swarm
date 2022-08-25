@@ -20,7 +20,7 @@ class Achievements {
 		["Tricious", 					"Hit the three Vicious Notes", 						'vicious_3_notes', 		false],
 		["Happy holidays!", 			"Die while a festive cart is distracting you", 		'is_not_christmas', 	false],
 		["Yummy!", 						"Use 100 Gumdrops", 								'cumming_passion', 		false],
-		//Other
+		//Ote
 		["Full Gifted Hive", 			"Complete The Mod 100%", 							'mod_100%', 			false],
 		["One more time", 				"Not being able to kill the tunnel bear", 			'tunnel_not_complete', 	false],
 		["Who is this?", 				"Get Sticky in da Stick bug menu (5%)", 			'who_dis_man?', 		false],
