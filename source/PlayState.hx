@@ -70,6 +70,9 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
+	public static var Random_Number = FlxG.random.int(0, 10);
+	public var Index2 = 0;
+
 	public static var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], //From 0% to 19%
 		['Shit', 0.4], //From 20% to 39%
@@ -375,28 +378,6 @@ class PlayState extends MusicBeatState
 				default:
 					curStage = 'stage';
 			}
-		}
-
-		var shitStuff = ['scrollSpeed', 'moreArrows', 'windowMoves', 'camMoves', 'coloringArrow'];
-
-		switch (songName){
-			case 'bopeebo':
-				if (curStep == FlxG.random.int(900)){
-					if (curBeat % 8 == 4){
-						switch (shitStuff){
-							case 'scrollSpeed':
-								songSpeed += 1;
-								var textS = "Song Speed + 0.5!";
-							case 'coloringArrow':
-								var arrowBabyCrying:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player);
-								var flxgStuffy = FlxG.random.float(0, 255);
-								arrowBabyCrying.setColorTransform(flxgStuffy, flxgStuffy, flxgStuffy);
-								var textAC = "changing color to" + flxgStuffy + "...";
-						}
-					}
-				}
-			default:
-				break;
 		}
 
 		// - VegecriSLost
@@ -2339,6 +2320,35 @@ class PlayState extends MusicBeatState
 						heyTimer = 0;
 					}
 				}
+		}
+
+		var shitStuff = ['scrollSpeed', 'moreArrows', 'windowMoves', 'camMoves', 'coloringArrow'];
+
+		if(Index2 == 0){
+			switch (curStage){
+				case 'stage':
+					if (curBeat == Random_Number){
+						trace("Yeah " + Random_Number);
+						if (curStep % 4 == 2){
+							trace("Super Yeah");
+							switch (shitStuff[FlxG.random.int(0, 4)]){
+								case 'scrollSpeed':
+									songSpeed += 1;
+									var textS = "Song Speed + 0.5!";
+								case 'coloringArrow':
+								 	// var arrowBabyCrying:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player);
+									// var flxgStuffy = FlxG.random.float(0, 255);
+								 	// arrowBabyCrying.setColorTransform(flxgStuffy, flxgStuffy, flxgStuffy);
+								 	// var textAC = "changing color to" + flxgStuffy + "...";
+									trace("changing color to...");
+								default:
+									trace("No");
+							}
+
+							Index2 += 1;
+						}
+					}
+			}
 		}
 
 		if(!inCutscene) {
