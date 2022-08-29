@@ -2333,8 +2333,9 @@ class PlayState extends MusicBeatState
 							trace("Super Yeah");
 							switch (shitStuff[FlxG.random.int(0, 4)]){
 								case 'scrollSpeed':
-									songSpeed += 1;
+									songSpeed += 0.6;
 									var textS = "Song Speed + 0.5!";
+									trace("speed");
 								case 'coloringArrow':
 								 	// var arrowBabyCrying:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player);
 									// var flxgStuffy = FlxG.random.float(0, 255);
