@@ -1,4 +1,4 @@
-	--easy script configs
+    --easy script configs
     IntroTextSize = 25	--Size of the text for the Now Playing thing.
     IntroSubTextSize = 35 --size of the text for the Song Name.
     IntroSubText2Size = 20
