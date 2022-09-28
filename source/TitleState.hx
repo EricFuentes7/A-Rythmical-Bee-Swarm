@@ -258,7 +258,7 @@ class TitleState extends MusicBeatState
 			}
 		}
 
-		Conductor.changeBPM(titleJSON.bpm);
+		Conductor.changeBPM(titleJSON.bpm + 4);
 		persistentUpdate = true;
 
 		var bg:FlxSprite = new FlxSprite();
@@ -389,6 +389,10 @@ class TitleState extends MusicBeatState
 	var transitioning:Bool = false;
 	private static var playJingle:Bool = false;
 
+	function tweenyZoomy(){
+		FlxTween.tween(Alphabet.AlphaCharacter.alphabet, {"textSize": 2}, 1, {type: LOOPING});
+	}
+
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music != null)
@@ -511,7 +515,7 @@ class TitleState extends MusicBeatState
 	{
 		for (i in 0...textArray.length)
 		{
-			var money:Alphabet = new Alphabet(0, 0, textArray[i], true, false);
+			var money:Alphabet = new Alphabet(0, 0, textArray[i], true, false, 0.5, 2);
 			money.screenCenter(X);
 			money.y += (i * 60) + 200 + offset;
 			if(credGroup != null && textGroup != null) {
@@ -542,7 +546,7 @@ class TitleState extends MusicBeatState
 	}
 
 
-	private var sickBeats:Int = 5; //Basically curBeat but won't be skipped if you hold the tab or resize the screen
+	private var sickBeats:Int = 0; //Basically curBeat but won't be skipped if you hold the tab or resize the screen
 	public static var closedState:Bool = false;
 	override function beatHit()
 	{
@@ -561,6 +565,7 @@ class TitleState extends MusicBeatState
 
 		if(!closedState) {
 			sickBeats++;
+			//tweenyZoomy();
 			switch (sickBeats)
 			{
 				case 7:
