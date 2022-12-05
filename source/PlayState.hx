@@ -727,12 +727,12 @@ class PlayState extends MusicBeatState
 				//Vicious comeme la po- -Vegecri 2022-
 				case 'viciousBebe':
 					if(ClientPrefs.lowQuality) {
-						var bg:BGSprite = new BGSprite('beebe/BGBBeeeb', 0, 0, 0.8, 0.9);
+						var bg:BGSprite = new BGSprite('viciousbg', 0, 0, 0.8, 0.9);
 						bg.scale.set(5, 5);
 						bg.antialiasing = false;
 						add(bg);
 					}
-					var bg:BGSprite = new BGSprite('beebe/BGBBeeeb', 0, 0, 0.8, 0.9);
+					var bg:BGSprite = new BGSprite('viciousbg', 0, 0, 0.8, 0.9);
 					bg.scale.set(5, 5);
 					bg.antialiasing = true;
 					add(bg);
