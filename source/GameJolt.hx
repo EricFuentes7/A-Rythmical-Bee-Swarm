@@ -363,7 +363,7 @@ class GameJoltLogin extends MusicBeatSubstate
 
         Conductor.changeBPM(102);
 
-        var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat', 'preload'));
+        var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('Gamejolt-bg', 'preload'));
 		bg.setGraphicSize(FlxG.width);
 		bg.antialiasing = true;
 		bg.updateHitbox();
