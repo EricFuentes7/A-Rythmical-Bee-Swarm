@@ -100,25 +100,26 @@ class MainMenuState extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
-		var scale:Float = 1;
+		var scale:Float = 0.75;
 		/*if(optionShit.length > 6) {
 			scale = 6 / optionShit.length;
 		}*/
 
 		for (i in 0...optionShit.length)
 		{
+			trace('adding menu item ' + i);
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
+			var menuItem:FlxSprite = new FlxSprite(0, (i * 200)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/Honey_Main_assets');
-			menuItem.animation.addByPrefix('idle', optionShit[i] + "Story mode honey selector", 24);
-			menuItem.animation.addByPrefix('rotate', optionShit[i] + "Story mode honey selector rotation", 24);
-			menuItem.animation.addByPrefix('light', optionShit[i] + "Story mode honey selector lighted", 24);
-			menuItem.animation.play('idle');
+			menuItem.animation.addByPrefix('idle', "Story mode honey selector idle", 24);
+			menuItem.animation.addByPrefix('rotate', "Story mode honey selector rotation", 24);
+			menuItem.animation.addByPrefix('light', "Story mode honey selector lighted", 24);
 			menuItem.ID = i;
 			menuItem.screenCenter(X);
 			menuItems.add(menuItem);
+			menuItem.animation.play('idle');
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
 			menuItem.scrollFactor.set(0, scr);
@@ -202,6 +203,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
+				selectedOption();
 				if (optionShit[curSelected] == 'donate')
 				{
 					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
@@ -209,7 +211,6 @@ class MainMenuState extends MusicBeatState
 				else
 				{
 					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
 
 					if(ClientPrefs.flashing) FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 
@@ -227,7 +228,9 @@ class MainMenuState extends MusicBeatState
 						}
 						else
 						{
-							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
+							FlxTween.tween(spr, {alpha: 1}, 0.5, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
 							{
 								var daChoice:String = optionShit[curSelected];
 
@@ -250,6 +253,7 @@ class MainMenuState extends MusicBeatState
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 								}
+							}
 							});
 						}
 					});
@@ -288,16 +292,27 @@ class MainMenuState extends MusicBeatState
 
 			if (spr.ID == curSelected)
 			{
-				spr.animation.play('rotate');
-				spr.animation.finish();
 				spr.animation.play('light');
 				var add:Float = 0;
 				if(menuItems.length > 4) {
-					add = menuItems.length * 8;
+					add = menuItems.length * 2;
 				}
-				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y - add);
+				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y * 1.45 - 200);
 				spr.centerOffsets();
 			}
 		});
+	}
+
+	function selectedOption()
+	{
+		menuItems.forEach(function(spr:FlxSprite)
+		{
+			if (spr.ID == curSelected)
+			{
+				spr.animation.play('rotate');
+			}
+		});
+
+		FlxG.sound.play(Paths.sound('confirmMenu'));
 	}
 }
