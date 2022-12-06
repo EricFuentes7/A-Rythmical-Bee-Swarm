@@ -33,7 +33,7 @@ class MainMenuState extends MusicBeatState
 	private var camAchievement:FlxCamera;
 	
 	var optionShit:Array<String> = [
-		'story_mode',
+		'Story mode',
 		'freeplay',
 		#if MODS_ALLOWED 'mods', #end
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
@@ -111,9 +111,10 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
+			menuItem.frames = Paths.getSparrowAtlas('mainmenu/Honey_Main_Assets');
+			menuItem.animation.addByPrefix('idle', optionShit[i] + " honey selector", 24);
+			menuItem.animation.addByPrefix('rotate', optionShit[i] + " honey selector rotation", 24);
+			menuItem.animation.addByPrefix('light', optionShit[i] + " honey selector lighted");
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			menuItem.screenCenter(X);
@@ -232,7 +233,7 @@ class MainMenuState extends MusicBeatState
 
 								switch (daChoice)
 								{
-									case 'story_mode':
+									case 'Story mode':
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
@@ -287,7 +288,9 @@ class MainMenuState extends MusicBeatState
 
 			if (spr.ID == curSelected)
 			{
-				spr.animation.play('selected');
+				spr.animation.play('rotate');
+				spr.animation.finish();
+				spr.animation.play('light');
 				var add:Float = 0;
 				if(menuItems.length > 4) {
 					add = menuItems.length * 8;
