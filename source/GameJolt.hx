@@ -373,9 +373,9 @@ class GameJoltLogin extends MusicBeatSubstate
 		add(bg);
 
         charBop = new FlxSprite(FlxG.width - 400, 250);
-		charBop.frames = Paths.getSparrowAtlas('GJMenu/BOYFRIEND');
-		charBop.animation.addByPrefix('idle', 'BF idle dance', 24, false);
-        charBop.animation.addByPrefix('loggedin', 'BF HEY', 24, false);
+		charBop.frames = Paths.getSparrowAtlas('GJMenu/VegecriVSDeruki');
+		charBop.animation.addByPrefix('idle', 'Vegecri VS Deruki Fanart', 24, false);
+        charBop.animation.addByPrefix('loggedin', 'Deruki estrangulado', 24, false);
         charBop.setGraphicSize(Std.int(charBop.width * 1.4));
 		charBop.antialiasing = true;
         charBop.flipX = false;

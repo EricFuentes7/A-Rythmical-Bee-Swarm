@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="VegecriVSDeruki.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Deruki estrangulado0000" x="0" y="0" width="863" height="606" frameX="-78" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0001" x="863" y="0" width="863" height="605" frameX="-78" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0002" x="1726" y="0" width="858" height="599" frameX="-83" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0003" x="2584" y="0" width="842" height="611" frameX="-99" frameY="-91" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0004" x="0" y="611" width="848" height="702" frameX="-93" frameY="0" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0005" x="848" y="611" width="841" height="697" frameX="-100" frameY="-5" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0006" x="1689" y="611" width="846" height="683" frameX="-95" frameY="-19" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0007" x="2535" y="611" width="864" height="668" frameX="-77" frameY="-34" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0008" x="0" y="1313" width="895" height="666" frameX="-46" frameY="-36" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0009" x="895" y="1313" width="933" height="599" frameX="-8" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0010" x="1828" y="1313" width="941" height="599" frameX="0" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0011" x="2769" y="1313" width="904" height="599" frameX="-37" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0012" x="0" y="1979" width="844" height="599" frameX="-97" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0013" x="844" y="1979" width="844" height="599" frameX="-97" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0014" x="844" y="1979" width="844" height="599" frameX="-97" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0015" x="844" y="1979" width="844" height="599" frameX="-97" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0016" x="844" y="1979" width="844" height="599" frameX="-97" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0017" x="844" y="1979" width="844" height="599" frameX="-97" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Deruki estrangulado0018" x="844" y="1979" width="844" height="599" frameX="-97" frameY="-103" frameWidth="941" frameHeight="709"/>
+	<SubTexture name="Vegecri VS Deruki Fanart0000" x="1688" y="1979" width="863" height="599"/>
+</TextureAtlas>
