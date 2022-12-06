@@ -33,7 +33,7 @@ class MainMenuState extends MusicBeatState
 	private var camAchievement:FlxCamera;
 	
 	var optionShit:Array<String> = [
-		'Story mode',
+		'story mode',
 		'freeplay',
 		#if MODS_ALLOWED 'mods', #end
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
@@ -111,10 +111,10 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/Honey_Main_Assets');
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " honey selector", 24);
-			menuItem.animation.addByPrefix('rotate', optionShit[i] + " honey selector rotation", 24);
-			menuItem.animation.addByPrefix('light', optionShit[i] + " honey selector lighted");
+			menuItem.frames = Paths.getSparrowAtlas('mainmenu/Honey_Main_assets');
+			menuItem.animation.addByPrefix('idle', optionShit[i] + "Story mode honey selector", 24);
+			menuItem.animation.addByPrefix('rotate', optionShit[i] + "Story mode honey selector rotation", 24);
+			menuItem.animation.addByPrefix('light', optionShit[i] + "Story mode honey selector lighted", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			menuItem.screenCenter(X);
@@ -233,7 +233,7 @@ class MainMenuState extends MusicBeatState
 
 								switch (daChoice)
 								{
-									case 'Story mode':
+									case 'story mode':
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
