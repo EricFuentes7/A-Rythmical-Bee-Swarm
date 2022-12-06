@@ -2,9 +2,9 @@
 <TextureAtlas imagePath="Honey_Main_assets.png">
 	<!-- Created with Adobe Animate version 21.0.0.35450 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Story mode honey selector0000" x="0" y="0" width="724" height="251" frameX="-1" frameY="0" frameWidth="725" frameHeight="251"/>
-	<SubTexture name="Story mode honey selector0001" x="724" y="0" width="725" height="251"/>
-	<SubTexture name="Story mode honey selector0002" x="1449" y="0" width="725" height="251"/>
+	<SubTexture name="Story mode honey selector idle0000" x="0" y="0" width="724" height="251" frameX="-1" frameY="0" frameWidth="725" frameHeight="251"/>
+	<SubTexture name="Story mode honey selector idle0001" x="724" y="0" width="725" height="251"/>
+	<SubTexture name="Story mode honey selector idle0002" x="1449" y="0" width="725" height="251"/>
 	<SubTexture name="Story mode honey selector lighted0000" x="2174" y="0" width="724" height="326" frameX="-1" frameY="-6" frameWidth="725" frameHeight="337"/>
 	<SubTexture name="Story mode honey selector lighted0001" x="2898" y="0" width="725" height="337"/>
 	<SubTexture name="Story mode honey selector lighted0002" x="0" y="337" width="725" height="326" frameX="0" frameY="-6" frameWidth="725" frameHeight="337"/>
