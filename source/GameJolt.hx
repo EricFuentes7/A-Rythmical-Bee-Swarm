@@ -307,10 +307,30 @@ class GameJoltInfo extends FlxSubState
         "in the Notepad fates are written.",
         "Look at the mod folders :).",
         "Lime test windows -debug.",
-        "Play Friday Night Swarmin'.",
+        "Don't play it bitch'.",
         "Did you know PICO FUNNY SO FUNNY.",
         "BrightFyre kiss me -Deruki.",
-        "Loong list lol."
+        "Loong list lol.",
+        "stfu.",
+        "She did it after cur me off!",
+        "Leak ma balls.",
+        "Give my ideas.",
+        ":troll_face:",
+        "Doors roblox",
+        "Get some bitches first.",
+        "Deruki fuck you.",
+        "Fabricio contesta!",
+        "varsinso.",
+        "Syntax Error: x^2+1=0.", //x^2+1=0
+        "Donde coño estan las SYSTOOLS joder.", //nose
+        "ÑÑÑÑÑÑÑÑÑÑÑÑÑÑ.", //si
+        "Deruki puta.", //si
+        "Estrangulame esta XD.", //si
+        "Derukimeame esta XDD.", //si
+        "Vegecri pasa animacionees.", //no
+        "Derukas me cago en todo eh.", //referencia al menu
+        "El dunde verde lo hizo.",
+        "SEMEPERDIOELFLA."
     ];
 }
 
@@ -376,7 +396,6 @@ class GameJoltLogin extends MusicBeatSubstate
 		charBop.frames = Paths.getSparrowAtlas('GJMenu/VegecriVSDeruki');
 		charBop.animation.addByPrefix('idle', 'Vegecri VS Deruki Fanart', 24, false);
         charBop.animation.addByPrefix('loggedin', 'Deruki estrangulado', 24, false);
-        charBop.setGraphicSize(Std.int(charBop.width * 1.4));
 		charBop.antialiasing = true;
         charBop.flipX = false;
 		add(charBop);
