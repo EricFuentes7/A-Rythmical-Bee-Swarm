@@ -396,6 +396,7 @@ class GameJoltLogin extends MusicBeatSubstate
 		charBop.frames = Paths.getSparrowAtlas('GJMenu/VegecriVSDeruki');
 		charBop.animation.addByPrefix('idle', 'Vegecri VS Deruki Fanart', 24, false);
         charBop.animation.addByPrefix('loggedin', 'Deruki estrangulado', 24, false);
+        charBop.setGraphicSize(100, 100);
 		charBop.antialiasing = true;
         charBop.flipX = false;
 		add(charBop);
