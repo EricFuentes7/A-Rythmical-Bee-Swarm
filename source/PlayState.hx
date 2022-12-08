@@ -4563,7 +4563,7 @@ class PlayState extends MusicBeatState
 								GameJoltAPI.getTrophy(162004);
 							}
 					case 'bro_u_sure_mad':
-						if(FlxG.mouse.justPressed) {
+						if(chartingMode == true) {
 							unlock = true;
 							GameJoltAPI.getTrophy(162005);
 						}
