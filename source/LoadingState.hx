@@ -5,6 +5,7 @@ import lime.app.Future;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxSprite;
+import flixel.util.FlxColor;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxTimer;
 import flixel.math.FlxMath;
@@ -46,7 +47,10 @@ class LoadingState extends MusicBeatState
 	{
 		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xffcaff4d);
 		add(bg);
-		funkay = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/funkay.png', IMAGE));
+		funkay = new FlxSprite(0, 0);
+		funkay.frames = Paths.getSparrowAtlas('loading/loading');
+		funkay.animation.addByPrefix("idle", "loading loading", 24, true);
+		funkay.animation.play("idle");
 		funkay.setGraphicSize(0, FlxG.height);
 		funkay.updateHitbox();
 		funkay.antialiasing = ClientPrefs.globalAntialiasing;
@@ -77,11 +81,21 @@ class LoadingState extends MusicBeatState
 
 				var fadeTime = 0.5;
 				FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);
-				new FlxTimer().start(fadeTime + MIN_TIME, function(_) introComplete());
-			}
-		);
-	}
-	
+				trace('la pantalla carga god');
+				
+				new FlxTimer().start(fadeTime + MIN_TIME, function(_) {
+				FlxG.camera.fade(FlxColor.BLACK, 0.3, false);
+				new FlxTimer().start(0.3, function(_) {
+				FlxG.switchState(target);
+				
+				});
+
+			});
+
+	});
+				
+				}
+
 	function checkLoadSong(path:String)
 	{
 		if (!Assets.cache.hasSound(path))
@@ -101,15 +115,15 @@ class LoadingState extends MusicBeatState
 		trace(Assets.hasLibrary(library));
 		if (Assets.getLibrary(library) == null)
 		{
-			@:privateAccess
-			if (!LimeAssets.libraryPaths.exists(library))
-				throw "Missing library: " + library;
+			// @:privateAccess
+			// if (!LimeAssets.libraryPaths.exists(library))
+			// 	throw "Missing library: " + library;
 
 			var callback = callbacks.add("library:" + library);
 			Assets.loadLibrary(library).onComplete(function (_) { callback(); });
 		}
 	}
-	
+
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
@@ -154,6 +168,7 @@ class LoadingState extends MusicBeatState
 		Paths.setCurrentLevel(directory);
 		trace('Setting asset folder to ' + directory);
 
+
 		var loaded:Bool = false;
 		if (PlayState.SONG != null) {
 			loaded = isSoundLoaded(getSongPath()) && (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath())) && isLibraryLoaded("shared") && isLibraryLoaded(directory);
@@ -161,7 +176,6 @@ class LoadingState extends MusicBeatState
 		
 		if (!loaded)
 			return new LoadingState(target, stopMusic, directory);
-
 		if (stopMusic && FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 		
@@ -177,6 +191,7 @@ class LoadingState extends MusicBeatState
 	{
 		return Assets.getLibrary(library) != null;
 	}
+
 	
 	override function destroy()
 	{

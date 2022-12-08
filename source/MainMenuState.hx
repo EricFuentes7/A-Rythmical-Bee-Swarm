@@ -122,7 +122,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
-			menuItem.scrollFactor.set(0, scr);
+			menuItem.scrollFactor.set(5, scr);
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 			menuItem.updateHitbox();
@@ -293,10 +293,6 @@ class MainMenuState extends MusicBeatState
 			if (spr.ID == curSelected)
 			{
 				spr.animation.play('light');
-				var add:Float = 0;
-				if(menuItems.length > 4) {
-					add = menuItems.length * 2;
-				}
 				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y * 1.45 - 200);
 				spr.centerOffsets();
 			}
@@ -310,6 +306,12 @@ class MainMenuState extends MusicBeatState
 			if (spr.ID == curSelected)
 			{
 				spr.animation.play('rotate');
+				// Set the hitbox to the size of the sprite
+				spr.updateHitbox();
+				// Set the origin to the center of the sprite
+				// spr.x -= 900;
+				spr.y -= 180;
+
 			}
 		});
 
