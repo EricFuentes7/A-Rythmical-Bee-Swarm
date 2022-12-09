@@ -44,6 +44,7 @@ import openfl.utils.Assets as OpenFlAssets;
 import lime.media.AudioBuffer;
 import haxe.io.Bytes;
 import flash.geom.Rectangle;
+import Achievements;
 import flixel.util.FlxSort;
 #if MODS_ALLOWED
 import sys.io.File;
@@ -71,6 +72,24 @@ class ChartingState extends MusicBeatState
 	public var ignoreWarnings = false;
 	var undos = [];
 	var redos = [];
+
+	#if ACHIEVEMENTS_ALLOWED
+	var achievementObj:AchievementObject = null;
+	function startAchievement(achieve:String) {
+		achievementObj = new AchievementObject(achieve, camOther);
+		achievementObj.onFinish = achievementEnd;
+		add(achievementObj);
+		trace('Giving achievement ' + achieve);
+	}
+	function achievementEnd():Void
+	{
+		achievementObj = null;
+		if(endingSong && !inCutscene) {
+			endSong();
+		}
+	}
+	#end
+	
 	var eventStuff:Array<Dynamic> =
 	[
 		['', "Nothing. Yep, that's right."],
@@ -1496,6 +1515,12 @@ class ChartingState extends MusicBeatState
 		
 		if (FlxG.mouse.justPressed)
 		{
+			var achieve:String = checkForAchievement(['bro_u_sure_mad']);
+			if (achieve != null) {
+				startAchievement(achieve);
+			} else {
+				FlxG.save.flush();
+			}
 			if (FlxG.mouse.overlaps(curRenderedNotes))
 			{
 				curRenderedNotes.forEachAlive(function(note:Note)
