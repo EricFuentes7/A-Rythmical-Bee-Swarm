@@ -479,6 +479,39 @@ class PlayState extends MusicBeatState
 					add(stageCurtains);
 				}
 
+			case 'viciousstage': //Abejas
+				var bg:BGSprite = new BGSprite('BGimages/BG', -600, -200);
+				add(bg);
+
+				var piso:BGSprite = new BGSprite('BGimages/BeeBG-Grass', -650, 600);
+				piso.updateHitbox();
+				add(piso);
+
+				var puerta:BGSprite = new BGSprite('BGimages/BeeBG-Tickets' -650, 600);
+				puerta.updateHitbox();
+				add(puerta);
+
+				var pared:BGSprite = new BGSprite('BGimages/BeeBG-Back2', -650, 600);
+				pared.updateHitbox();
+				add(pared);
+
+				/*if(!ClientPrefs.lowQuality) {
+					var stageLight:BGSprite = new BGSprite('stage_light', -125, -100, 0.9, 0.9);
+					stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
+					stageLight.updateHitbox();
+					add(stageLight);
+					var stageLight:BGSprite = new BGSprite('stage_light', 1225, -100, 0.9, 0.9);
+					stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
+					stageLight.updateHitbox();
+					stageLight.flipX = true;
+					add(stageLight);
+
+					var stageCurtains:BGSprite = new BGSprite('stagecurtains', -500, -300, 1.3, 1.3);
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+					stageCurtains.updateHitbox();
+					add(stageCurtains);
+				}*/
+
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
