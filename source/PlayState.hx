@@ -480,19 +480,27 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'viciousstage': //Abejas
-				var bg:BGSprite = new BGSprite('BGimages/BG', -600, -200);
+				var bg:BGSprite = new BGSprite('BGimages/BG', 0, 50);
+				bg.scale.set(1.3, 1.3);
+				bg.active = true;
 				add(bg);
 
-				var piso:BGSprite = new BGSprite('BGimages/BeeBG-Grass', -650, 600);
+				var piso:BGSprite = new BGSprite('BGimages/BeeBG-Grass', 0, 50);
 				piso.updateHitbox();
+				piso.scale.set(1.3, 1.3);
+				piso.active = true;
 				add(piso);
 
-				var puerta:BGSprite = new BGSprite('BGimages/BeeBG-Tickets' -650, 600);
+				var puerta:BGSprite = new BGSprite('BGimages/BeeBG-Tickets', 0, 50);
 				puerta.updateHitbox();
+				puerta.scale.set(1.3, 1.3);
+				puerta.active = true;
 				add(puerta);
 
-				var pared:BGSprite = new BGSprite('BGimages/BeeBG-Back2', -650, 600);
+				var pared:BGSprite = new BGSprite('BGimages/BeeBG-Back2', 0, 50);
 				pared.updateHitbox();
+				pared.scale.set(1.3, 1.3);
+				pared.active = true;
 				add(pared);
 
 				/*if(!ClientPrefs.lowQuality) {
