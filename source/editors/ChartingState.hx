@@ -73,7 +73,7 @@ class ChartingState extends MusicBeatState
 	var undos = [];
 	var redos = [];
 
-	#if ACHIEVEMENTS_ALLOWED
+	/*#if ACHIEVEMENTS_ALLOWED
 	var achievementObj:AchievementObject = null;
 	function startAchievement(achieve:String) {
 		achievementObj = new AchievementObject(achieve, camOther);
@@ -88,7 +88,7 @@ class ChartingState extends MusicBeatState
 			endSong();
 		}
 	}
-	#end
+	#end*/
 	
 	var eventStuff:Array<Dynamic> =
 	[
@@ -1515,12 +1515,12 @@ class ChartingState extends MusicBeatState
 		
 		if (FlxG.mouse.justPressed)
 		{
-			var achieve:String = checkForAchievement(['bro_u_sure_mad']);
+			/*var achieve:String = checkForAchievement(['bro_u_sure_mad']);
 			if (achieve != null) {
 				startAchievement(achieve);
 			} else {
 				FlxG.save.flush();
-			}
+			}*/
 			if (FlxG.mouse.overlaps(curRenderedNotes))
 			{
 				curRenderedNotes.forEachAlive(function(note:Note)
