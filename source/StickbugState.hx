@@ -62,8 +62,8 @@ class StickbugState extends MusicBeatState
 		stickBug.frames = Paths.getSparrowAtlas('stickbugmenu/Stick_bug');
 		stickBug.animation.addByPrefix('idle', 'stick bug animation', 24, true);
 		stickBug.animation.play('idle');
-		stickBug.height -= -10000;
-		stickBug.width -= -10000;
+		stickBug.scale.x = 0.9;
+		stickBug.scale.y = 0.9;
 		add(stickBug);
 
 		blueSpeech = new FlxSprite().loadGraphic(Paths.image('stickbugmenu/blue_speech_bubble'));
