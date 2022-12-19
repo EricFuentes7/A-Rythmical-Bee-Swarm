@@ -70,9 +70,11 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
-	public static var Random_Number = FlxG.random.int(0, 10);
+	public static var randomNumber = FlxG.random.int(0, 10);
 	public var Index2 = 0;
 
+	//ChatGPT told me it's an array of dynamic values :)
+	
 	public static var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], //From 0% to 19%
 		['Shit', 0.4], //From 20% to 39%
@@ -479,25 +481,25 @@ class PlayState extends MusicBeatState
 					add(stageCurtains);
 				}
 
-			case 'viciousstage': //Abejas
-				var bg:BGSprite = new BGSprite('BGimages/BG', 0, 50);
-				bg.scale.set(1.7, 1.7);
+			case 'viciousstage': //Abejas; desde cuando es esto?
+				var bg:BGSprite = new BGSprite('BGimages/BG', 0, 50, 2, 2);
+				bg.scale.set(2, 2); //Escala más grande sino se ve mal
 				bg.active = false;
 				add(bg);
 
-				var piso:BGSprite = new BGSprite('BGimages/BeeBG-Grass', 0, 50);
-				piso.updateHitbox();
-				piso.scale.set(1.7, 1.7);
-				piso.scrollFactor.set(0.9, 0.9);
-				add(piso);
+				var hierba:BGSprite = new BGSprite('BGimages/BeeBG-Grass', 0, 50, .6, .6);
+				hierba.updateHitbox();
+				hierba.scale.set(1.7, 1.7);
+				hierba.scrollFactor.set(0.9, 0.9);
+				add(hierba); //Hierba >:)
 
-				var puerta:BGSprite = new BGSprite('BGimages/BeeBG-Tickets', 0, 50);
-				puerta.updateHitbox();
-				puerta.scale.set(1.7, 1.7);
-				puerta.scrollFactor.set(0.9, 0.9);
-				add(puerta);
+				var tickets:BGSprite = new BGSprite('BGimages/BeeBG-Tickets', 0, 50, 1.6, 1.6);
+				tickets.updateHitbox();
+				tickets.scale.set(1.7, 1.7);
+				tickets.scrollFactor.set(0.9, 0.9);
+				add(tickets); //Pq la var se llamaba puerta? -Vegecri 2022-
 
-				var pared:BGSprite = new BGSprite('BGimages/BeeBG-Back2', 0, 50);
+				var pared:BGSprite = new BGSprite('BGimages/BeeBG-Back2', 0, 50, 1.2, 1.2);
 				pared.updateHitbox();
 				pared.scale.set(1.7, 1.7);
 				pared.scrollFactor.set(0.9, 0.9);
@@ -767,8 +769,10 @@ class PlayState extends MusicBeatState
 
 				//Vicious comeme la po- -Vegecri 2022-
 				//Jaja te arregle la stage -Deruki 2022-
-				case 'viciousBebe': //Week 1
-				var bg:BGSprite = new BGSprite('viciousbg', 0, 100, 1.6, 1.6);
+				//Callate deruki, a nadie le importa -Vegecri 2022-
+
+				case 'viciousBebe': //Week 1 ViciousBebe XD
+					var bg:BGSprite = new BGSprite('viciousbg', 0, 100, 1.6, 1.6);
 				add(bg);
 		}
 
@@ -2376,8 +2380,8 @@ class PlayState extends MusicBeatState
 		if(Index2 == 0){
 			switch (curStage){
 				case 'stage':
-					if (curBeat == Random_Number){
-						trace("Yeah " + Random_Number);
+					if (curBeat == randomNumber){
+						trace("Yeah " + randomNumber);
 						if (curStep % 4 == 2){
 							trace("Super Yeah");
 							switch (shitStuff[FlxG.random.int(0, 4)]){
