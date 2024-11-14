@@ -8,7 +8,7 @@
 Este es un mod de *Friday Night Funkin'* que añade conectividad con **GameJolt** para el registro de logros, el personaje de "Vicious Bee", junto a su cancion y su chart, y un cambio de menú bugeado.
 </p>
 <p align="center">
-**Proyecto BETA ( Nunca se acabará 🗿)**
+<b>Proyecto BETA ( Nunca se acabará 🗿)</b>
 </p>
 
 
