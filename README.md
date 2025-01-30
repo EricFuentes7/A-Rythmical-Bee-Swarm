@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.pinimg.com/originals/5c/a9/d9/5ca9d956cd14171a0e0907ea07bf15ab.gif" alt="Duck Dancing GIF" styles="width:50px">
+  <img src="https://i.pinimg.com/originals/5c/a9/d9/5ca9d956cd14171a0e0907ea07bf15ab.gif" alt="Duck Dancing GIF" width="50px" height="50px">
 </p>
 
 <h1 align="center">Patos Patricio Website 🦆</h1>
