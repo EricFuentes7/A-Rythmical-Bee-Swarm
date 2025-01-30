@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="https://media.tenor.com/HtSIXGKYDSkAAAAM/bee.gif" alt="Bee Twerking GIF">
+  <img src="https://i.pinimg.com/originals/5c/a9/d9/5ca9d956cd14171a0e0907ea07bf15ab.gif" alt="Duck Dancing GIF">
 </p>
 
-<h1 align="center">A Rythmical Bee Swarmin' 🐝🎶</h1>
+<h1 align="center">Patos Patricio Website 🦆</h1>
 
 <p align="center">
-Este es un mod de <b>Friday Night Funkin'</b> que añade conectividad con <b><a href="https://gamejolt.com/@FueDev">GameJolt</a></b> para el registro de logros, el personaje de "Vicious Bee", junto a su cancion y su chart, y un cambio de menú bugeado.
+Esta esla página web para el proyecto de síntesi de <b>impresion 3D<b>, es para promocionar el video comercial.
 </p>
 <p align="center">
-<b>Proyecto BETA ( Nunca se acabará 🗿)</b>
+<b>Imperio In Progress</b>
 </p>
 
 
